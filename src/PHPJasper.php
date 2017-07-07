@@ -124,7 +124,9 @@ class PHPJasper
                 $this->command .= " {$mapDbParams[$key]} {$value}";
             }
         }
-
+        if ($options['resources']) {
+             $this->command .= ' -r';
+        }
         return $this;
     }
 
